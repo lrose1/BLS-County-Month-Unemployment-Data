@@ -16,3 +16,4 @@ allyears <- lapply(years, function(x){
   mutate(year = paste0("20", x))
 })
 county_data <- bind_rows(allyears)
+write_csv(county_data, paste0(download_location, "/county_unemployment_by_year.csv"))
